@@ -1,10 +1,22 @@
 PODS:
   - Masonry (0.6.2)
+  - UIView-JWMasonryConstraint (0.0.1)
 
 DEPENDENCIES:
   - Masonry
+  - UIView-JWMasonryConstraint (from `https://github.com/ashamp/UIView-JWMasonryConstraint.git`)
+
+EXTERNAL SOURCES:
+  UIView-JWMasonryConstraint:
+    :git: https://github.com/ashamp/UIView-JWMasonryConstraint.git
+
+CHECKOUT OPTIONS:
+  UIView-JWMasonryConstraint:
+    :commit: 90d3508d225fdba843b54af0b9525caedbe2ec06
+    :git: https://github.com/ashamp/UIView-JWMasonryConstraint.git
 
 SPEC CHECKSUMS:
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  UIView-JWMasonryConstraint: 7d2e5bfec7dcf2817e8003e14758f111b384d0fe
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.38.0

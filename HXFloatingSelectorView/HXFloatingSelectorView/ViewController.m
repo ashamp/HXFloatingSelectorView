@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+#import "HXFloatingSelectorView.h"
+
+#import "SampleCellView.h"
+
 @interface ViewController ()
 
 @end
@@ -17,6 +21,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSArray *dataSource = @[ @"数据1",@"数据2",@"数据3",@"数据4",@"数据5",@"数据6",];
+    HXFloatingSelectorView *floatingSelectorView = [[HXFloatingSelectorView alloc]initWithDataSource:dataSource cellViewCreationBlock:^UIView *(id dataModel) {
+        SampleCellView *cell = [[SampleCellView alloc] initWithDataModel:dataModel];
+        return cell;
+    } cellDidSelectBlock:^(id dataModel) {
+        NSLog(@"%@",dataModel);
+    }];
+    
+    floatingSelectorView.frame = CGRectMake(100, 100, 200, 30);
+    [self.view addSubview:floatingSelectorView];
 }
 
 - (void)didReceiveMemoryWarning {
